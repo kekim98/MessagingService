@@ -3,6 +3,8 @@
  */
 
 public class GitTest {
+
+    린이리닝라ㅏㄴ이ㅣ라ㅣㄴ이ㅏㄹ아ㅣ
 }
 
 
