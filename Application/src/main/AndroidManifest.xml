@@ -1,4 +1,4 @@
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2014 The Android Open Source Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,21 +12,22 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-  -->
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.messagingservice">
 
-    <application android:allowBackup="true"
-        android:label="@string/app_name"
+    <application
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
         android:theme="@style/AppTheme">
-
-        <meta-data android:name="com.google.android.gms.car.application"
-                   android:resource="@xml/automotive_app_desc"/>
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,23 +35,24 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".MessagingService">
-        </service>
+        <service android:name=".MessagingService"></service>
 
         <receiver
             android:name=".MessageReadReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.example.android.messagingservice.ACTION_MESSAGE_READ"/>
+                <action android:name="com.example.android.messagingservice.ACTION_MESSAGE_READ" />
             </intent-filter>
         </receiver>
-
         <receiver
             android:name=".MessageReplyReceiver"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.example.android.messagingservice.ACTION_MESSAGE_REPLY"/>
+                <action android:name="com.example.android.messagingservice.ACTION_MESSAGE_REPLY" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".Main2Activity"></activity>
     </application>
+
 </manifest>
